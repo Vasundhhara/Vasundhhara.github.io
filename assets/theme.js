@@ -16,3 +16,13 @@
   }
   document.addEventListener("DOMContentLoaded", function () { updateIcon(theme); });
 })();
+
+window.toggleNav = function () {
+  var l = document.querySelector(".nav-links");
+  if (l) l.classList.toggle("open");
+};
+document.addEventListener("click", function (e) {
+  var l = document.querySelector(".nav-links");
+  if (!l || !l.classList.contains("open")) return;
+  if (e.target.closest(".nav-links a")) l.classList.remove("open");
+});
