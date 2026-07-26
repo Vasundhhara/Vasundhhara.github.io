@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Personal Knowledge Management System | Vasundhhara Singh Katoch</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script src="../assets/theme.js"></script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">Vasundhhara Singh Katoch</a>
+    <div class="nav-links">
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
+      <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">&#9790;</button>
+    </div>
+  </div>
+</nav>
+<header class="detail-header">
+  <div class="container">
+    <a class="crumb" href="../index.html#projects">&larr; Back to Projects</a>
+    <h1>AI Personal Knowledge Management System</h1>
+    <div class="meta">Hushh AI · 2023 — 2025</div>
+    <div class="tags" style="margin-top:16px;"><span class="tag">GraphRAG</span><span class="tag">LightRAG</span><span class="tag">Neo4j</span><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">GraphQL</span></div>
+  </div>
+</header>
+<div class="container detail-body">
+
+<div class="highlight-box"><p>An AI-driven personalized chatbot over a user's structured and unstructured personal data — with <strong>three retrieval architectures designed, built, and benchmarked</strong> to find the best contextual search approach.</p></div>
+<h2>The problem</h2>
+<p>Personal data lives across many sources and formats. A personalization engine needs retrieval that understands relationships (people, events, preferences) — not just keyword or embedding similarity.</p>
+<h2>Retrieval architectures explored</h2>
+<ul>
+<li><strong>LLM-generated GraphQL queries</strong> — the model writes structured queries against user data. Stack: GraphQL, LangChain, LLaMA models, Hugging Face, Ollama, FastAPI.</li>
+<li><strong>LightRAG</strong> — implemented from the research paper for lightweight graph-augmented retrieval. Stack: FastAPI.</li>
+<li><strong>GraphRAG over Neo4j</strong> — knowledge-graph construction and graph-traversal-based retrieval for relationship-aware answers. Stack: FastAPI, Neo4j, Cypher.</li>
+</ul>
+<h2>Platform work</h2>
+<ul>
+<li>Owned the full lifecycle: system architecture, testing, and deployment.</li>
+<li>Designed a centralized PostgreSQL data architecture as the shared backend across products — multi-source ingestion, multi-channel retrieval.</li>
+<li>Led deployment strategy across Vertex AI, GCP, Docker, Hugging Face, and self-hosted GPUs, optimizing inference cost, latency, and scalability.</li>
+</ul>
+
+<h2>Writing on this project</h2>
+<ul>
+<li><a href="https://medium.com/@vasundhhara-katoch/how-a-personal-knowledge-model-pkm-can-simplify-your-digital-life-55a27c95f3d8" target="_blank" rel="noopener">How a Personal Knowledge Model (PKM) can simplify your digital life</a></li>
+<li><a href="https://medium.com/@vasundhhara-katoch/the-technical-journey-of-making-a-personal-knowledge-model-c0a17ef44a55" target="_blank" rel="noopener">The technical journey of making a Personal Knowledge Model</a></li>
+<li><a href="https://medium.com/@vasundhhara-katoch/the-technical-journey-of-making-a-personal-knowledge-model-part-2-d8b21ac28454" target="_blank" rel="noopener">The technical journey of making a Personal Knowledge Model — Part 2</a></li>
+</ul>
+
+</div>
+<footer>
+  <div class="footer-inner">
+    <span>&copy; 2026 Vasundhhara Singh Katoch</span>
+    <span><a href="../index.html">Home</a><a href="mailto:vasundhhara.katoch@gmail.com">Email</a></span>
+  </div>
+</footer>
+</body>
+</html>

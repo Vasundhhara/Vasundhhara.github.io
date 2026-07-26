@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>IgniteTech — My Impact | Vasundhhara Singh Katoch</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script src="../assets/theme.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">Vasundhhara Singh Katoch</a>
+    <div class="nav-links">
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
+      <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">☾</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-header">
+  <div class="container">
+    <a class="crumb" href="../index.html#experience">← Back to Experience</a>
+    <h1>AI Innovation Specialist — Product Engineering</h1>
+    <div class="meta"><a href="https://ignitetech.ai/" target="_blank" rel="noopener">IgniteTech</a> · Jun 2025 — Present</div>
+  </div>
+</header>
+
+<div class="container detail-body">
+
+  <div class="highlight-box">
+    <p><strong>Core engineer and #1 contributor</strong> (~1,800 commits, 39% of core codebase) on <strong>Iris</strong> — a multi-tenant customer engagement and social publishing platform of 16 microservices serving 250+ enterprise customers across 27 social platforms, built to process 100M+ conversations a year — while co-owning product strategy, architecture decisions, and the AI roadmap.</p>
+  </div>
+
+  <p style="margin: 24px 0;"><a class="btn" href="https://drive.google.com/file/d/1mK3At7hF_jBUteV7Ahee0qpq7UvLMhGt/view?usp=drive_link" target="_blank" rel="noopener">▶ Watch product demo</a></p>
+
+  <h2>Platform Architecture &amp; Modernization</h2>
+  <ul>
+    <li><strong>Re-platformed a decade-old Java ingestion stack</strong> into stateless Node/TypeScript + Kafka microservices — cutting message latency from minutes to <strong>195ms P50</strong> (validated at 20K msgs/hr, zero errors), deploy time <strong>30×</strong> (30 min → &lt;60s rolling updates), and per-customer infrastructure cost <strong>80%</strong> ($150 → $30/mo). Part of a phased migration retiring 4 legacy systems spanning 14 years of code.</li>
+    <li>Designed scalable APIs and <strong>event-driven architectures</strong> using Kafka (38 topics), MySQL, MongoDB, DynamoDB, Elasticsearch, and Redis — provisioned for <strong>150M+ events/day</strong> with reliable real-time processing and cross-service synchronization.</li>
+    <li>Built real-time agent experiences with React, WebSockets, and low-latency backend services, secured with multi-tenant authentication and RBAC — maintaining <strong>85% line / 88% function test coverage</strong>.</li>
+    <li>Cut app login time from <strong>43s to 3s</strong> — 15× faster First Contentful Paint and a 7× smaller main bundle (5.2 MB → 727 KB) — through route-based code splitting, lazy-loaded i18n, and vendor chunking.</li>
+  </ul>
+
+  <h2>AI Product Line</h2>
+  <ul>
+    <li>Built <strong>provider-agnostic LLM infrastructure</strong> supporting OpenAI, Claude, Gemini, and Llama with automated failover, observability, audit trails, and token-cost tracking via Langfuse and Prometheus.</li>
+    <li>Architected and shipped <strong>10+ AI capabilities</strong> — summarization, sentiment analysis, translation, entity extraction, AI-assisted response generation, intelligent ticket prioritization — orchestrated through Kafka, FastAPI, MongoDB, and async batch processing, with per-tenant controls and feature-level rollout.</li>
+    <li>Converted agent engagement into AI-assisted workflows, cutting agent response drafting from 3–4 minutes to ~1 minute (<strong>4× faster</strong>).</li>
+    <li>Contributed to the inference and delivery layer — containerized FastAPI services on Kubernetes with CI/CD automation and GPU-based inference infrastructure.</li>
+  </ul>
+
+  <h2>Product Ownership</h2>
+  <ul>
+    <li>Contributed to <strong>post-acquisition strategy and roadmap</strong> for platform modernization, delivering the MVP in 3 months.</li>
+    <li>Co-owned architecture decisions, API contracts, technical documentation, and build-ready PRDs across Engineering, Design, and QA.</li>
+    <li>Drove <strong>enterprise readiness</strong>: multi-tenancy, SSO/OAuth, RBAC, tenant isolation, audit trails, and data residency.</li>
+    <li>Instrumented product metrics — adoption, AI usage, cost-per-interaction — via Grafana and Langfuse, reviewed weekly to guide roadmap decisions.</li>
+    <li>Delivered pilot launches across teams and ran post-pilot retros, emphasizing rapid validate–rebuild–launch cycles.</li>
+  </ul>
+
+  <h2>AI Tooling, Research &amp; Workflow Innovation</h2>
+  <ul>
+    <li>Contributed to an <strong>MCP (Model Context Protocol) server</strong> enabling LLM agents to navigate, retrieve, and surgically edit a WorkFlowy-based "second brain" with safe, path-scoped updates.</li>
+    <li>Designed a multi-day empirical study comparing AI code-review tools (Claude Code vs. CodeRabbit) across real production PRs — the resulting hybrid workflow was <strong>adopted as team standard</strong> with near-zero false-positive bug-finding rates.</li>
+    <li>Contributed to <strong><a href="https://www.linkedin.com/feed/update/urn:li:activity:7486059836946685952/" target="_blank" rel="noopener">Maestro</a></strong>, a productivity layer on Claude Code adding session management and multi-repo support.</li>
+    <li>Authored <a href="https://app.notion.com/p/Second-Brain-3a98e9fc78e98041b795ec202689d3e8?source=copy_link" target="_blank" rel="noopener">5 internal research topics</a> spanning AI market dynamics, enterprise ROI, RAG architecture evaluation, and AI-assisted system design.</li>
+  </ul>
+
+  <p style="margin-top: 40px;"><strong>Bottom line:</strong> ~1,800 commits across 336 Jira tickets and ~200 features in 6 months — top contributor on both flagship repositories.</p>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Vasundhhara Singh Katoch</span>
+    <span><a href="../index.html">Home</a><a href="mailto:vasundhhara.katoch@gmail.com">Email</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
