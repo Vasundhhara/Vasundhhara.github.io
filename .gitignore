@@ -8,3 +8,6 @@
 .vscode/
 .idea/
 *.swp
+
+# Local tooling
+.mcp.json
