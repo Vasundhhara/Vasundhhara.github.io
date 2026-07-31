@@ -234,3 +234,92 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; }
 
 /* ---- Poster image ---- */
 .poster-img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); margin: 16px 0; display: block; }
+
+/* ---- Sticky note ---- */
+.sticky-note {
+  max-width: 220px;
+  margin: 18px auto 0;
+  padding: 16px 18px;
+  background: #c5d9a0;
+  color: #33430f;
+  font-family: var(--font-voice, "Inter", sans-serif);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  border-radius: 2px;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.15);
+  transform: rotate(-3deg);
+}
+[data-theme="dark"] .sticky-note {
+  background: #94ab6c;
+  color: #212e08;
+}
+
+/* ---- Sticky note cards (homepage only) ---- */
+.sticky-page .card,
+.sticky-page .conf-card {
+  background: #c5d9a0;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.16);
+  color: #33430f;
+}
+.sticky-page .card h3,
+.sticky-page .conf-card h3 {
+  color: #263408;
+}
+.sticky-page .card p,
+.sticky-page .conf-card p {
+  color: #3f5312;
+}
+.sticky-page .card .tag {
+  background: rgba(0, 0, 0, 0.08);
+  color: #33430f;
+}
+.sticky-page .card .impact-link,
+.sticky-page .card-links a,
+.sticky-page .conf-card a:not(.btn) {
+  color: #385307;
+  font-weight: 700;
+}
+.sticky-page .card-links {
+  border-top-color: rgba(0, 0, 0, 0.12);
+}
+.sticky-page .card-grid .card:nth-child(odd),
+.sticky-page .conf-card {
+  transform: rotate(-2deg);
+}
+.sticky-page .card-grid .card:nth-child(even) {
+  transform: rotate(2deg);
+}
+.sticky-page .card-grid .card:nth-child(3n) {
+  transform: rotate(-1.5deg);
+}
+.sticky-page a.card:hover {
+  transform: rotate(0deg) translateY(-4px);
+  border-color: transparent;
+  box-shadow: 4px 6px 14px rgba(0, 0, 0, 0.22);
+}
+[data-theme="dark"] .sticky-page .card,
+[data-theme="dark"] .sticky-page .conf-card {
+  background: #94ab6c;
+  color: #212e08;
+}
+[data-theme="dark"] .sticky-page .card h3,
+[data-theme="dark"] .sticky-page .conf-card h3 {
+  color: #1a2306;
+}
+[data-theme="dark"] .sticky-page .card p,
+[data-theme="dark"] .sticky-page .conf-card p {
+  color: #2c3a0c;
+}
+
+/* ---- Keep Events carousel as a normal card, not a sticky note ---- */
+.sticky-page #conferences .conf-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  transform: none;
+  box-shadow: var(--shadow);
+}
+.sticky-page #conferences .conf-card h3 { color: var(--text); }
+.sticky-page #conferences .conf-card p { color: var(--text-muted); }
