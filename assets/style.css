@@ -240,8 +240,8 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; }
   max-width: 220px;
   margin: 18px auto 0;
   padding: 16px 18px;
-  background: #c5d9a0;
-  color: #33430f;
+  background: #f7e08a;
+  color: #4a3a06;
   font-family: var(--font-voice, "Inter", sans-serif);
   font-size: 0.92rem;
   line-height: 1.5;
@@ -250,8 +250,8 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; }
   transform: rotate(-3deg);
 }
 [data-theme="dark"] .sticky-note {
-  background: #94ab6c;
-  color: #212e08;
+  background: #d9bf5c;
+  color: #33280a;
 }
 
 /* ---- Sticky note cards (homepage only) ---- */
