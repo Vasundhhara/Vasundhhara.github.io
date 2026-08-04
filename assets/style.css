@@ -237,11 +237,12 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; }
 
 /* ---- Sticky note ---- */
 .sticky-note {
+  position: relative;
   max-width: 220px;
   margin: 18px auto 0;
   padding: 16px 18px;
-  background: #f7e08a;
-  color: #4a3a06;
+  background: #cfd28c;
+  color: #3d3a14;
   font-family: var(--font-voice, "Inter", sans-serif);
   font-size: 0.92rem;
   line-height: 1.5;
@@ -249,36 +250,50 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; }
   box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.15);
   transform: rotate(-3deg);
 }
+.sticky-note::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 18px;
+  width: 24px;
+  height: 38px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23767672' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(-10deg);
+  filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.25));
+  pointer-events: none;
+}
 [data-theme="dark"] .sticky-note {
-  background: #d9bf5c;
-  color: #33280a;
+  background: #9a9c5e;
+  color: #24220a;
 }
 
 /* ---- Sticky note cards (homepage only) ---- */
 .sticky-page .card,
 .sticky-page .conf-card {
-  background: #c5d9a0;
+  background: #cfd28c;
   border: none;
   border-radius: 3px;
   box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.16);
-  color: #33430f;
+  color: #3d3a14;
 }
 .sticky-page .card h3,
 .sticky-page .conf-card h3 {
-  color: #263408;
+  color: #2b2708;
 }
 .sticky-page .card p,
 .sticky-page .conf-card p {
-  color: #3f5312;
+  color: #55501f;
 }
 .sticky-page .card .tag {
   background: rgba(0, 0, 0, 0.08);
-  color: #33430f;
+  color: #3d3a14;
 }
 .sticky-page .card .impact-link,
 .sticky-page .card-links a,
 .sticky-page .conf-card a:not(.btn) {
-  color: #385307;
+  color: #5c5710;
   font-weight: 700;
 }
 .sticky-page .card-links {
@@ -301,16 +316,16 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; }
 }
 [data-theme="dark"] .sticky-page .card,
 [data-theme="dark"] .sticky-page .conf-card {
-  background: #94ab6c;
-  color: #212e08;
+  background: #9a9c5e;
+  color: #24220a;
 }
 [data-theme="dark"] .sticky-page .card h3,
 [data-theme="dark"] .sticky-page .conf-card h3 {
-  color: #1a2306;
+  color: #1c1804;
 }
 [data-theme="dark"] .sticky-page .card p,
 [data-theme="dark"] .sticky-page .conf-card p {
-  color: #2c3a0c;
+  color: #34300f;
 }
 
 /* ---- Keep Events carousel as a normal card, not a sticky note ---- */
@@ -323,3 +338,54 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; }
 }
 .sticky-page #conferences .conf-card h3 { color: var(--text); }
 .sticky-page #conferences .conf-card p { color: var(--text-muted); }
+
+/* ---- Paperclip on sticky notes ---- */
+.sticky-page .card,
+.sticky-page .conf-card {
+  position: relative;
+  overflow: visible;
+}
+.sticky-page .card::before,
+.sticky-page .conf-card::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 18px;
+  width: 24px;
+  height: 38px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23767672' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(-10deg);
+  filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.25));
+  pointer-events: none;
+  z-index: 2;
+}
+.sticky-page #conferences .conf-card::before {
+  display: none;
+}
+
+/* ---- Skills: white surface ---- */
+#skills {
+  background: var(--surface);
+}
+
+/* ---- Contact: green accent background ---- */
+#contact {
+  background: var(--accent);
+}
+#contact h2 {
+  color: #fff;
+}
+#contact p {
+  color: rgba(255, 255, 255, 0.85);
+}
+#contact .btn {
+  background: #fff;
+  color: var(--accent);
+}
+#contact .btn.ghost {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
