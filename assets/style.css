@@ -389,3 +389,187 @@ footer { border-top: 1px solid var(--border); padding: 28px 0; }
   color: #fff;
   border-color: #fff;
 }
+
+/* ============================================================
+   ENGINEERING NOTEBOOK LAYER  (delete this whole block to revert)
+   ============================================================ */
+
+:root {
+  --paper: #fdfbf4;
+  --grid-line: rgba(120, 130, 90, 0.13);
+  --ink: #2f2e28;
+  --ink-soft: #57544a;
+  --pencil: #a8a08a;
+  --nb-border: #d8d2be;
+  --nb-shadow: 3px 4px 0 rgba(120, 112, 85, 0.16);
+}
+[data-theme="dark"] {
+  --paper: #1f2018;
+  --grid-line: rgba(180, 195, 140, 0.09);
+  --ink: #ecebdd;
+  --ink-soft: #b3b09b;
+  --pencil: #77745f;
+  --nb-border: #3f3e2f;
+  --nb-shadow: 3px 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* --- Graph paper --- */
+body {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--ink);
+}
+.section-alt {
+  background-color: rgba(226, 220, 196, 0.42);
+  background-image: inherit;
+  background-size: 24px 24px;
+}
+[data-theme="dark"] .section-alt { background-color: rgba(255, 255, 255, 0.03); }
+#skills { background-color: rgba(255, 255, 255, 0.55); }
+[data-theme="dark"] #skills { background-color: rgba(255, 255, 255, 0.04); }
+
+/* --- Handwriting for headings --- */
+h1, h2, h3, .metrics-title, .metric b, .hero .tagline {
+  font-family: "Caveat", "Segoe Script", cursive;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+h1 { font-size: clamp(2.4rem, 6vw, 3.6rem) !important; line-height: 1.05; }
+h2 { font-size: 2.05rem !important; }
+h3 { font-size: 1.5rem !important; line-height: 1.25; }
+.hero .tagline {
+  font-size: 1.75rem;
+  color: var(--accent);
+  border-bottom: 2px solid var(--nb-border);
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 16px;
+}
+.metric b { font-size: 2.3rem; }
+.metrics-title { font-size: 1.7rem; text-transform: none; letter-spacing: 0.01em; }
+
+/* --- Body text stays readable --- */
+body, .hero p.sub, .card p, .conf-card p, .detail-body p, .detail-body li, .metric span {
+  font-family: "Inter", -apple-system, sans-serif;
+}
+.hero p.sub, .card p, .conf-card p { color: var(--ink-soft); }
+
+/* --- Pencil-sketch dividers --- */
+section h2::after {
+  height: 2px;
+  background: var(--pencil);
+  opacity: 0.45;
+  border-radius: 2px;
+}
+
+/* --- Cards as taped-in paper --- */
+.card, .conf-card {
+  background: #fffdf6;
+  border: 1px solid var(--nb-border);
+  border-radius: 3px;
+  box-shadow: var(--nb-shadow);
+}
+[data-theme="dark"] .card, [data-theme="dark"] .conf-card { background: #262719; }
+a.card:hover, .sticky-page a.card:hover {
+  transform: rotate(0deg) translateY(-3px);
+  box-shadow: 4px 6px 0 rgba(120, 112, 85, 0.22);
+  border-color: var(--accent);
+}
+
+/* --- Sticky notes keep their tilt, softer paper --- */
+.sticky-page .card, .sticky-page .conf-card {
+  border: 1px solid rgba(120, 112, 85, 0.28);
+  box-shadow: var(--nb-shadow);
+  border-radius: 3px;
+}
+.sticky-note {
+  border: 1px solid rgba(120, 112, 85, 0.28);
+  box-shadow: var(--nb-shadow);
+  border-radius: 3px;
+  font-family: "Caveat", cursive;
+  font-size: 1.35rem;
+  line-height: 1.35;
+}
+
+/* --- Hand-annotated meta text --- */
+.exp-date, .impact-link, .card-links a, .crumb, .meta {
+  font-family: "Kalam", "Caveat", cursive;
+  font-size: 1.02rem;
+}
+.exp-date { color: var(--pencil); }
+.org { font-family: "Inter", sans-serif; font-weight: 600; }
+
+/* --- Tags as margin scribbles --- */
+.tag {
+  font-family: "Kalam", cursive;
+  font-weight: 400;
+  font-size: 0.86rem;
+  border: 1px solid var(--nb-border);
+  border-radius: 12px 4px 14px 5px;
+  background: transparent;
+  color: var(--accent);
+}
+.sticky-page .card .tag { border-color: rgba(120, 112, 85, 0.3); }
+
+/* --- Buttons like rubber-stamped labels --- */
+.btn {
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+  border-radius: 20px 6px 22px 7px;
+  box-shadow: var(--nb-shadow);
+  border: 1px solid transparent;
+}
+.btn.ghost { border: 2px solid var(--accent); }
+.btn:hover { transform: translateY(-2px); opacity: 1; }
+
+/* --- Photos & media taped down --- */
+.hero-art {
+  border-radius: 4px;
+  border: 1px solid var(--nb-border);
+  background: #fffdf6;
+  padding: 10px 10px 34px;
+  box-shadow: var(--nb-shadow);
+  transform: rotate(-2deg);
+  aspect-ratio: auto;
+}
+.hero-art img { border-radius: 2px; }
+.poster-img, .video-wrap, .carousel-track {
+  border: 1px solid var(--nb-border);
+  border-radius: 3px;
+  box-shadow: var(--nb-shadow);
+}
+
+/* --- Dashed rules for lists --- */
+.exp-item { border-bottom: 1px dashed var(--pencil); }
+.metrics {
+  border-top: 1px dashed var(--pencil);
+  border-bottom: 1px dashed var(--pencil);
+  background-color: transparent;
+}
+footer { border-top: 1px dashed var(--pencil); }
+
+/* --- Highlight box like a margin note --- */
+.highlight-box {
+  border: 1px solid var(--nb-border);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 3px 3px 0;
+  background: rgba(224, 224, 196, 0.35);
+  box-shadow: var(--nb-shadow);
+}
+
+/* --- Nav --- */
+.nav {
+  background: rgba(253, 251, 244, 0.92) !important;
+  border-bottom: 1px dashed var(--pencil);
+}
+[data-theme="dark"] .nav { background: rgba(31, 32, 24, 0.92) !important; }
+.nav-links a { font-family: "Kalam", cursive; font-size: 1rem; }
+.theme-btn { border-radius: 50%; border: 1px solid var(--nb-border); }
+
+/* --- Contact panel --- */
+#contact { border-top: 1px dashed var(--pencil); }
+#contact h2 { color: #fff; }
